@@ -20,6 +20,10 @@ public class Snack {
 	public double getCost() {
 		return cost;
 	}
+	
+	public String getCostFormatted() {
+		return String.format("$%.2f", cost);
+	}
 
 	public void setCost(double cost) {
 		this.cost = cost;
@@ -27,7 +31,7 @@ public class Snack {
 
 	@Override
 	public String toString() {
-		return String.format("%s: %.2f", name, cost);
+		return String.format("%s: $%.2f", name, cost);
 	}
 	
 	public static Snack of(String name, double cost) {
